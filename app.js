@@ -11,9 +11,6 @@ function assignText(element, text) {
 
 function attemptCheck() {
     let userNumber = parseInt(document.getElementById('userValue').value);
-    console.log('Secret number ' + secretNumber);
-
-    console.log('Attempt ' + attempts);
 
     if (userNumber === secretNumber) {
         assignText('p', `You guessed the number in ${attempts} ${attempts === 1 ? 'attempt' : 'attempts'}`);
@@ -37,9 +34,6 @@ function cleanInput() {
 
 function generateSecretNumber() {
     let generatedNumber = Math.floor(Math.random()*maxNumber)+1;
-
-    console.log(generatedNumber);
-    console.log(drawnNumbers);
 
     if (drawnNumbers.length == maxNumber) {
         assignText('p', 'The maximum number possible is already reached')
